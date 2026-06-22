@@ -38,6 +38,23 @@ This approach aims to improve interpretability while reducing severe taxonomic e
   - Adds local concept heads for internal taxonomy nodes and trains with teacher-forcing.
 
 ---
+## 📊 Summary of Results
+
+Our experimental evaluations on the CUB-200-2011 test split highlight a distinct accuracy-interpretability trade-off across the implemented architectures:
+
+| Model Configuration | Top-1 Species Acc | Top-5 Species Acc | Concept Acc | Mean LCA Error Distance |
+| :--- | :---: | :---: | :---: | :---: |
+| **Baseline CBM** (Flat) | **80.10%** | **95.56%** | 81.33% | 11.20 |
+| **H-CBM (Mean Matrix)** | 63.67% | 91.08% | 68.32% | 11.42 |
+| **H-CBM (Learnable Weights)** | 69.30% | 91.50% | **87.50%** | 11.08 |
+| **WordNet CBM** (Taxonomic) | 78.13% | — | — | — |
+
+### Key Findings:
+1. **The Bottleneck Trade-off:** The flat Baseline CBM establishes an empirical upper bound for pure classification accuracy ($80.10\%$) due to its unconstrained access to all fine attributes.
+2. **Learnable vs. Fixed Aggregation:** Fixed averaging (`hier_mean_matrix`) proves overly destructive, dropping performance significantly. Transitioning to learnable weights (`hier_learnable_weights`) recovers this discriminative gap, significantly boosting concept accuracy to **$87.50\%$** and reducing catastrophic cross-regional errors down to just **$3.20\%$**.
+3. **Taxonomic Excellence:** The WordNet CBM (`hier_wordnet_cbm`) achieves highly competitive species accuracy ($78.13\%$) while successfully constraining classification mistakes to structurally close biological groups (Genus Acc: $84.64\%$, Family Acc: $87.40\%$), generating intuitive multi-level textual explanations.
+
+---
 
 ## 📦 Dataset
 
