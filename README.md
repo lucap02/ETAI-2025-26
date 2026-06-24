@@ -6,7 +6,7 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 This repository contains the implementation and analysis of hierarchical Concept Bottleneck Models (CBMs) for fine-grained bird classification on the CUB-200-2011 dataset.
 
 The goal is to compare standard flat CBMs with hierarchical designs that incorporate:
@@ -17,7 +17,7 @@ This approach aims to improve interpretability while reducing severe taxonomic e
 
 ---
 
-## 🧠 Notebooks
+## Notebooks
 
 - `baseline_cbm.ipynb`
   - Standard flat CBM baseline.
@@ -38,7 +38,7 @@ This approach aims to improve interpretability while reducing severe taxonomic e
   - Adds local concept heads for internal taxonomy nodes and trains with teacher-forcing.
 
 ---
-## 📊 Summary of Results
+## Summary of Results
 
 Our experimental evaluations on the CUB-200-2011 test split highlight a distinct accuracy-interpretability trade-off across the implemented architectures:
 
@@ -56,7 +56,7 @@ Our experimental evaluations on the CUB-200-2011 test split highlight a distinct
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 This project uses the **CUB-200-2011** dataset.
 
@@ -92,7 +92,7 @@ pip install torch torchvision numpy pandas matplotlib seaborn Pillow tqdm nltk
 
 ---
 
-## ▶️ Usage
+## Usage
 
 1. Open the notebook of interest in Jupyter, Colab, or another notebook environment.
 2. Execute the first cells to install dependencies and set the random seed.
@@ -107,7 +107,7 @@ Recommended order:
 
 ---
 
-## 📌 Notes
+## Notes
 
 - The project is notebook-driven; there are no separate Python scripts in the repository.
 - Paths in the notebooks use `/content/data` and `/content/processed`, so the notebooks are ready for Google Colab. If running locally, adapt those paths as needed.
