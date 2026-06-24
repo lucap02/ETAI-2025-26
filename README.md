@@ -70,7 +70,7 @@ The notebooks download and extract the dataset automatically at runtime.
 
 ---
 
-## ⚙️ Dependencies
+## Dependencies
 
 The notebooks install their Python dependencies automatically when executed, but the main requirements are:
 
@@ -115,7 +115,7 @@ Recommended order:
 
 ---
 
-## 📚 Acknowledgements
+## Acknowledgements
 
 - CUB-200-2011 dataset
 - WordNet taxonomy via NLTK
